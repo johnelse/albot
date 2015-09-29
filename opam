@@ -1,0 +1,25 @@
+opam-version: "1"
+maintainer: "simon.beaumont@citrix.com"
+build: [
+  ["./configure"]
+  [make]
+]
+install: [
+  [make "PREFIX=%{prefix}%" "install"]
+]
+remove: [
+  [make "PREFIX=%{prefix}%" "uninstall"]
+]
+depends: [
+  "atdgen"
+  "cmdliner"
+  "cohttp"
+  "github"
+  "irc-client"
+  "lwt"
+  "ounit"
+  "ocamlfind"
+  "re"
+  "uri"
+]
+ocaml-version: [>= "4.00.1"]
